@@ -14,40 +14,38 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  h2 {
-    margin-top: 0;
-    font-weight: bold;
-    color: #333;
-  }
-  
   form {
-    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    overflow-y: hidden; /* Hide the vertical scrollbar */
+    box-sizing: border-box; /* Include padding and border in width and height */
   }
   
   label {
-    display: block;
     margin-bottom: 10px;
-    font-weight: bold;
-    color: #666;
   }
   
-  input[type="text"],
-  input[type="email"],
-  input[type="password"] {
-    width: 100%;
-    height: 40px;
-    margin-bottom: 20px;
+  input[type="text"], input[type="email"], input[type="password"] {
     padding: 10px;
+    margin-bottom: 20px;
     border: 1px solid #ccc;
+    width: 100%; /* Make the input fields full width */
+    box-sizing: border-box; /* Include padding and border in width and height */
   }
   
-  input[type="checkbox"] {
+  .remember-me {
+    margin-bottom: 20px;
+  }
+  
+  .remember-me input[type="checkbox"] {
     margin-right: 10px;
   }
   
   .btn-register {
-    width: 100%;
-    height: 40px;
+    padding: 10px 20px;
     background-color: #4CAF50;
     color: #fff;
     border: none;
@@ -59,12 +57,31 @@
     background-color: #3e8e41;
   }
   
-  .login-link {
-    font-size: 14px;
-    color: #666;
-    text-decoration: none;
+  p {
+    margin-top: 20px;
+    text-align: center;
   }
   
-  .login-link:hover {
-    text-decoration: underline;
+  p a {
+    text-decoration: none;
+    color: #4CAF50;
+  }
+  
+  p a:hover {
+    color: #3e8e41;
+  }
+  
+  /* Change the scrollbar color to white */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #fff; /* Change the scrollbar thumb color to white */
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background-color: #f9f9f9; /* Change the scrollbar track color to light gray */
   }
