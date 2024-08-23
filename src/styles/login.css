@@ -1,9 +1,34 @@
+/* Container for aligning the content vertically and left */
 .register {
   display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  align-items: center;
+  height: 120vh; /* Full viewport height */
+  padding: 0 20px; /* Optional horizontal padding */
+  background-color: #e0f7fa; /* Light blue background for the page */
+}
+
+.register-box {
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
-  margin-bottom: 4rem;
+  background-color: #007ab3; /* Blue background for the form box */
+  padding: 20px;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  width: 100%;
+  max-width: 400px; /* Maximum width of the form box */
+}
+
+.login-input {
+  width: 100%; /* Full width */
+  padding: 0.5rem 0 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom, #007ab3, #535ae4); /* Blue gradient */
 }
 
 .auth-google {
@@ -13,24 +38,24 @@
   padding: 10px;
   font-weight: 450;
   text-align: center;
-} 
-.r , .fp{
+}
+
+.r, .fp {
   font-size: 15px;
 }
 
-.si{
- background: linear-gradient(45deg , orange,yellow);
+.si {
+  background: linear-gradient(45deg, #007ab3, #007ab3); /* Adjust as needed */
 }
 
-input::placeholder{
-  color: rgb(130, 129, 127);
+input::placeholder {
+  color: rgb(255, 255, 255); 
 }
 
 .eye-icon-login {
   position: absolute;
-  right: 14.5rem;
-  top: 42.9%;
-  transform: translateY(-60%);
+  right: 1rem; /* Adjusted for left alignment */
+  top: 50%;
+  transform: translateY(-50%);
   cursor: pointer;
 }
-

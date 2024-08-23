@@ -1,22 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowUp } from 'react-icons/fa';
 import Data from "../../Data/Data.json";
 import Pagination from "./Pagination";
 
 const Homeque = () => {
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentData, setCurrentData] = useState([]);
   const [pageSum, setPageSum] = useState(0);
   const [showScrollButton, setShowScrollButton] = useState(false);
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % 3);
-    }, 3000);
-
-    return () => clearInterval(intervalId);
-  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,7 +22,7 @@ const Homeque = () => {
   }, []);
 
   const showdetail = (index) => {
-    // console.log(index);
+    // Handle detail view if needed
   };
 
   const scrollToTop = () => {
@@ -48,8 +39,8 @@ const Homeque = () => {
           >
             <div>
               <img
-                src={destination.image[currentImageIndex]}
-                className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-in-out transform hover:scale-110"
+                src={destination.image[0]}  // Displaying only the first image
+                className="absolute inset-0 h-full w-full object-cover"
                 alt={destination.name}
               />
             </div>
@@ -60,7 +51,6 @@ const Homeque = () => {
             <div className="z-10 gap-y-1 pt-4 overflow-hidden cursor-default text-center text-sm leading-6 text-gray-300">
               {destination.description}
             </div>
-
             <div className="z-10 mt-4 justify-center text-center items-center">
               <Link to={`/detail/?id=${pageSum + i}`} key={pageSum + i}>
                 <button

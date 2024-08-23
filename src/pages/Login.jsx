@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import "../styles/login.css";
 import Google from "../assets/google.png";
 import logo from "../assets/bg-register.jpg";
-import show from "../assets/hide-password.png";
-import eye from "../assets/show-password.png";
 import Lock from "../assets/forgot-password.png";
 import { Link } from "react-router-dom";
 
@@ -44,7 +42,6 @@ const Login = () => {
                   className="eye-icon-login text-white"
                   onClick={togglePasswordVisibility}
                 >
-                  <img src={passwordVisible ? show : eye} alt="" />
                 </i>
               </div>
               <div className="mt-8">

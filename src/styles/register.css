@@ -10,25 +10,23 @@
 .register-box {
     display: flex;
     margin: auto;
-    width: 75%;
+    width: 100%;
     height: 100%;
 }
 
 .register-bg {
-    width: 60%;
-    background-image: url('../assets/new.jpg');
+    width: 100%;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .login-bg {
     width: 60%;
-    background-image: url('../assets/new1.jpg');
     background-size: cover;
 }
 
 .register-input {
-    width: 40%;
+    width: 100%;
     padding: 0.5rem 0 1rem 0;
     display: flex;
     flex-direction: column;
@@ -44,7 +42,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, gold, goldenrod);
+    background: linear-gradient(to bottom,#007ab3,#007ab3);
 }
 
 .auth-google {
@@ -119,28 +117,29 @@
     line-height: 16px;
     letter-spacing: 0em;
 
-    /* &::placeholder {
-        color: rgb(62, 155, 221);
-
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 16px;
-        letter-spacing: 0em;
-        text-align: left;
-    } */
+    
 }
 
-.eye-icon {
-    position: absolute;
-    right: 15rem;
-    top: 57.3%;
-    transform: translateY(-60%);
+.fp {
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+    background: none;
+    border: none;
     cursor: pointer;
+    color: black; /* Adjust color if needed */
+}
+
+.fp img {
+    width: 16px;
+    height: 16px;
+    margin-right: 0.5rem; /* Space between icon and text */
 }
 
 .remember-checkbox {
     margin-top: 1rem;
-    background-color: violet;
+    background-color: rgb(132, 130, 238);
     border-color: 1px solid blue;
 }
 
@@ -235,7 +234,7 @@
 }
 
 .connect-line {
-    width: 50%;
+    width: 100%;
     border: 1px solid black;
     height: 0;
 }
@@ -252,20 +251,20 @@
     .register-box {
         flex-direction: column;
         align-items: center;
-        width: 80%;
+        width: 100%;
         justify-content: center;
     }
 
     .register-input, .login-input {
-        width: 50%;
+        width: 100%;
     }
 
     .connect-login {
-        width: 30%;
+        width: 100%;
     }
 
     .connect {
-        width: 40%;
+        width: 100%;
     }
 }
 

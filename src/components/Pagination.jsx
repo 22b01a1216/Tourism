@@ -3,7 +3,7 @@ import ReactPaginate from "react-paginate";
 import Data from "../../Data/Data.json";
 
 export default function Pagination({ setCurrentData, setPageSum }) {
-  const itemsPerPage = 9;
+  const itemsPerPage = 6;  // Changed from 9 to 6
   const pageCount = Math.ceil(Data.destinations.length / itemsPerPage);
 
   const handlePageClick = (data) => {

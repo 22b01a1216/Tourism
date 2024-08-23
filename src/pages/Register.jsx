@@ -1,9 +1,6 @@
 import React, { useState } from "react";
 import "../styles/register.css";
 import Google from "../assets/google.png";
-import show from "../assets/hide-password.png";
-import eye from "../assets/show-password.png";
-import Lock from "../assets/forgot-password.png";
 import { Link } from "react-router-dom";
 
 const Register = () => {
@@ -22,13 +19,13 @@ const Register = () => {
             <h1 className="text-black">Register with Google</h1>
           </div>
           <div className="form-auth p-2">
-            <form action="">
+            <form>
               <div className="mt-3">
                 <label className="text-lg font-medium">Username</label>
                 <input
-                  className= " text-black/80 w-full border border-white rounded-xl p-2.5 mt-1"
+                  className="text-black/80 w-full border border-white rounded-xl p-2.5 mt-1"
                   placeholder="Enter your username"
-                  type="username"
+                  type="text"
                 />
               </div>
               <div className="mt-4">
@@ -41,18 +38,13 @@ const Register = () => {
               </div>
               <div className="mt-4">
                 <label className="text-lg font-medium">Password</label>
-                <input
-                  className="text-black/80 w-full border border-white rounded-xl p-2.5 mt-1"
-                  placeholder="Enter your password"
-                  type={passwordVisible ? "text" : "password"}
-                  
-                />
-                <i
-                  className="eye-icon text-white"
-                  onClick={togglePasswordVisibility}
-                >
-                  <img src={passwordVisible ? show : eye} alt="" />
-                </i>
+                <div className="relative">
+                  <input
+                    className="text-black/80 w-full border border-white rounded-xl p-2.5 mt-1"
+                    placeholder="Enter your password"
+                    type={passwordVisible ? "text" : "password"}
+                  />
+                </div>
               </div>
               <div className="mt-8">
                 <div className="flex justify-between items-center">
