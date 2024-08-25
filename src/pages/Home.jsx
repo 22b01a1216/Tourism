@@ -25,7 +25,7 @@ const Home = () => {
         <Navbar />
         <section className="mt-[5px]">
           <img
-            src="https://img.freepik.com/premium-vector/mumbai-skyline-landscape-view-city-mumbai-with-characteristics-buildings-monuments_743272-109.jpg?w=4320"
+            src="https://png.pngtree.com/back_origin_pic/05/06/82/976e7c4631828134cd09e6e9b70c310d.jpg"
       
             className="w-[100vw] h-[100vh] fixed"
             alt=""
@@ -35,16 +35,17 @@ const Home = () => {
               <span className="text-[3rem]">Welcome,</span>
               <span className="text-[2rem]"> to</span>
               <h1 className="text-[5rem] sm:ml-[25px] text-center font-[Agbalumo]">
-                Bharat <span id="samarkand">Tour</span>
+                Explore<span id="samarkand">Assistance</span>
               </h1>
             </div>
-            <div className="flex justify-center items-center sm:gap-[12rem] sm:h-[5.9rem] h-[11rem] sm:flex-row flex-col gap-[20px] ">
-              <Link to="/explore">
+            <div className="flex justify-center items-center sm:gap-[12rem] sm:h-[5.9rem] h-[11rem] sm:flex-row flex-col gap-[20px] registered" >
+              
+              <Link to="/login">
                 <button
                   className="text-[25px] w-[10rem] h-[2.9rem] rounded-xl bg-[black] text-[white] hover:text-[green] duration-[0.4s]"
                   type="button"
                 >
-                  Explore
+                  LOGIN
                 </button>
               </Link>
               <Link to="/places">

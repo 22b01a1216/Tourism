@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FaArrowUp } from 'react-icons/fa';
-import Data from "../../Data/Data.json";
 import Pagination from "./Pagination";
 
 const Homeque = () => {

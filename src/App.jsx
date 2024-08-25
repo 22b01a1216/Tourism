@@ -4,7 +4,6 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import Explore from "./pages/Explore";
 import Homeque from "./components/Homeque";
-import NotFound from "./pages/NotFound";
 import { ContactUs } from "./pages/ContactUs"
 import "./App.css";
 
@@ -21,7 +20,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/" element={<Home />} />
-        <Route path="*" element={<NotFound />} />
+  
         <Route path="/contact" element={<ContactUs />} />
       </Routes>
     </BrowserRouter>

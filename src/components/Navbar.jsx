@@ -21,7 +21,7 @@ function Navbar() {
       <div className="flex items-center justify-between w-full md:w-auto">
         <Link to="/">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-[Agbalumo] mr-4">
-            INDIA <span id="samarkand">GUIDE</span>
+            Explore <span id="samarkand">Assistance</span>
           </h1>
         </Link>
         

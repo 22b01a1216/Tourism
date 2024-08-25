@@ -14,7 +14,7 @@ const Loader = () => {
       <div id="load">
         <img src="https://t4.ftcdn.net/jpg/00/69/53/63/360_F_69536324_PXoCItwXg8VaC1lTB0zqkE0JyFsIIO1Y.jpg" id="logo"/>
         <h6 className="text-[2.5rem] font-[Agbalumo]" id="loadLogo">
-          Bharat <span id="samarkand">Yatra</span></h6>
+          Explore <span id="samarkand">Assistance</span></h6>
         <h6 id="factHead">Did you know?</h6>
         <h6 id="fact">{data[arrInd]}</h6>
       </div>
