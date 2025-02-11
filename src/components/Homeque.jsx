@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { FaArrowUp } from 'react-icons/fa';
+import { FaArrowUp } from "react-icons/fa";
 import Data from "../../Data/Data.json";
 import Pagination from "./Pagination";
 
@@ -23,27 +23,27 @@ const Homeque = () => {
       setShowScrollButton(window.pageYOffset > 100);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   const showdetail = (index) => {
-    // console.log(index);
+    console.log(index);
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <>
-      <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 gap-y-2 justify-center items-center relative">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 gap-y-6 justify-center items-center relative">
         {currentData.map((destination, i) => (
           <article
-            className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-sm mx-auto mt-24 bg-gray-900/40 shadow-lg transition duration-500 ease-in-out transform hover:shadow-2xl hover:scale-105"
+            className="relative isolate flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 bg-gray-900/40 shadow-lg transition duration-500 ease-in-out transform hover:shadow-2xl hover:scale-105"
             key={pageSum + i}
           >
             <div>
@@ -54,18 +54,17 @@ const Homeque = () => {
               />
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/40"></div>
-            <h3 className="z-10 mt-3 text-4xl font-bold cursor-default text-white text-center">
+            <h3 className="z-10 mt-3 text-2xl font-bold cursor-default text-white text-center">
               {destination.name}
             </h3>
-            <div className="z-10 gap-y-1 pt-4 overflow-hidden cursor-default text-center text-sm leading-6 text-gray-300">
+            <div className="z-10 gap-y-1 pt-4 text-center text-sm text-gray-300">
               {destination.description}
             </div>
-
-            <div className="z-10 mt-4 justify-center text-center items-center">
+            <div className="z-10 mt-4 text-center">
               <Link to={`/detail/?id=${pageSum + i}`} key={pageSum + i}>
                 <button
                   onClick={() => showdetail(pageSum + i)}
-                  className="w-[80px] h-[30px] border-2 rounded-xl text-white backdrop-blur cursor-pointer duration-[0.4s] mt-[5rem] hover:bg-[#f9a826] hover:text-[#1f2937] hover:shadow-lg hover:scale-105 transition duration-500 ease-in-out transform"
+                  className="w-[80px] h-[30px] border-2 rounded-xl text-white backdrop-blur cursor-pointer duration-500 hover:bg-[#f9a826] hover:text-[#1f2937] hover:shadow-lg hover:scale-105"
                 >
                   Explore
                 </button>

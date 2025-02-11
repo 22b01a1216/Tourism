@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import ReactPaginate from "react-paginate";
 import Data from "../../Data/Data.json";
 
 export default function Pagination({ setCurrentData, setPageSum }) {
-  const itemsPerPage = 9;
+  const itemsPerPage = 8; // 4 columns x 2 rows
   const pageCount = Math.ceil(Data.destinations.length / itemsPerPage);
 
   const handlePageClick = (data) => {
     let selected = data.selected;
-    let offset = Math.ceil(selected * itemsPerPage);
+    let offset = selected * itemsPerPage;
     setPageSum(offset);
     setCurrentData(Data.destinations.slice(offset, offset + itemsPerPage));
     window.scrollTo(0, 0);
@@ -16,7 +16,7 @@ export default function Pagination({ setCurrentData, setPageSum }) {
 
   useEffect(() => {
     setCurrentData(Data.destinations.slice(0, itemsPerPage));
-  }, []);
+  }, [setCurrentData]);
 
   return (
     <div>
